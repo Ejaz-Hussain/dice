@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(216, 187, 192);
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(255, 0, 0, 0.6),
+    rgba(128, 0, 128, 0.7)
+  );
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Nunito", sans-serif;
+  text-transform: uppercase;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.showcase {
+  width: 90%;
+  max-width: 100rem;
+  height: 60rem;
+  display: flex;
+  box-shadow: 0 0.3rem 15rem rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  position: relative;
+}
+
+.player {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding: 6rem 0;
+}
+.player1 {
+  background: rgba(231, 157, 157, 0.26);
+  border-radius: 1rem 0 0 1rem;
+}
+.player2 {
+  background: rgba(231, 157, 157, 0.26);
+  border-radius: 0 1rem 1rem 0;
+}
+
+.current-scores-box {
+  min-width: 10rem;
+  min-height: 10rem;
+  background-color: rgba(253, 32, 106, 0.781);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.6rem;
+  padding: 2.5rem 6.5rem;
+  color: #fff;
+  border-radius: 1rem;
+}
+
+.top {
+  color: #333;
+}
+
+.top > h1 {
+  font-size: 4rem;
+}
+.top > div {
+  margin-top: 5rem;
+  font-size: 8rem;
+}
+.bottom > h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #ffffffcc;
+}
+
+.bottom > span {
+  font-size: 3.4rem;
+}
+
+.new-game,
+.roll-dice,
+.hodl,
+.dice {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  margin-top: 4rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 1.3rem 3rem;
+  border-radius: 3rem;
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  user-select: none;
+}
+
+.dice {
+  top: 10rem;
+  background-color: #fff;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 0;
+  font-size: 5.5rem;
+  color: #000;
+}
+
+.roll-dice {
+  bottom: 15rem;
+}
+.hodl {
+  bottom: 8rem;
+}
+
+.player-turn {
+  background: rgba(204, 204, 204, 0.9);
+  background-color: rgba(207, 31, 122, 0.9);
+}
+
+.winner {
+  background-color: #48e8a4;
+}
+
+.winner h1 {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 850px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 35%;
+  }
+  .showcase {
+    margin: auto;
+    margin-top: 10rem;
+    flex-direction: column;
+    box-shadow: none;
+  }
+
+  .player1 {
+    margin-bottom: 10rem;
+  }
+  .hodl {
+    left: 70%;
+    bottom: 4rem;
+    font-size: 3rem;
+    border-radius: 4rem;
+  }
+  .roll-dice {
+    bottom: 4rem;
+    left: 25%;
+    font-size: 3rem;
+    border-radius: 4rem;
+  }
+  .new-game {
+    margin-top: -8rem;
+    font-size: 3rem;
+    border-radius: 4rem;
+  }
+  .dice {
+    top: 45rem;
+    height: fit-content;
+    font-size: 3.5rem;
+    border-radius: 8rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .roll-dice {
+    left: 18%;
+  }
+  .hodl {
+    left: 87%;
+  }
+  .dice {
+    left: 55%;
+  }
+}
+
+@media (max-width: 300px) {
+  .showcase {
+    display: none;
+  }
+  body::after {
+    content: "Nothing To Show";
+    font-size: 500%;
+    text-align: center;
+  }
+}
